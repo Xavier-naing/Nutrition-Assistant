@@ -7,6 +7,13 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Welcome</h2>
-    <p>THis is where you can find your ultimate diet.</p>
+    <div class="search-box">
+        <form action="/search/" method="GET">
+            <input type="text" name="query" placeholder="Search for recipes..." />
+            <button type="submit" style='font-size:15px; color: black;'><i class='fas fa-search'></i></button>
+        </form>
+    </div>
 {% endblock %}
+
+
+
