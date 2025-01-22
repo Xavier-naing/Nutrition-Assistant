@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nutrition Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        header {
+            font-family: 'Dancing Script', cursive;
+            font-size: 120px;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-image: url("fruit.jpeg");
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center; /* Centers content vertically */
+            align-items: center; /* Centers content horizontally */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center; 
+            gap: 20px; /* Space between buttons */
+        }
+        button, a.button {
+            margin-top: 50px;
+            font-family: 'Raleway', sans-serif;
+            background-color: orange;
+            color: black;
+            text-decoration: none; /* Removes underline for links */
+            text-align: center; /* Centers text inside links */
+            display: inline-block; /* Makes links behave like buttons */
+            border-radius: 30px;
+            height: 70px;
+            width: 250px;
+            font-size: 23px;
+            border: none;
+            cursor: pointer;
+            line-height: 70px; /* Aligns text vertically */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+        button:hover, a.button:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <header><strong>Discover Your Nutrition</strong> </header>
+    <div class="button-container">
+        <a href="recipeSearchpage.html" class="button">Search for Recipes</a>
+        <a href="ingredientSearchpage.html" class="button">Search by Ingredients</a>
+    </div>
+</body>
+</html>
