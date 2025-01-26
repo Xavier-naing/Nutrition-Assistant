@@ -1,8 +1,42 @@
-{% extends "base.html" %} {% block content %}
-<h2>Your Search Result</h2>
-<u1>
+{% extends "base.html" %} 
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+
+<h2>Your Search Result for <b>"{{ search }}"</b></h2>
+<a class="back" href="/Nutrition/home"> Go back </a>
+<div class="wrapper">
     {% for entry in result %}
-    <li> {{ entry.title }}</li>
+    <div class='container' style="cursor: pointer;" onclick="window.location='/recipe/{{entry.id}}';">
+        <img src="{{ entry.image }}"/>
+        <p>{{ entry.title }}</p>
+    </div>
     {% endfor %}
-</u1>
+</div>
+{%if current == "0" %}
+    True
+{% endif %}
+<div class="offset">
+    {% if current >= 3 %}
+        <a 
+        href="/Nutrition/result/{{search}}?current=0"> 0</a>
+        <a>...</a>
+    {% endif %}
+    {% for entry in totalResult %}
+    <a 
+    href="/Nutrition/result/{{search}}?current={{entry}}">{{entry}}</a>
+    {% endfor %}
+    {% if current != maximum %}
+        <a>...</a>
+        <a href="/Nutrition/result/{{search}}?current={{maximum}}">
+            {{maximum}}
+        </a>
+    {% endif %}
+</div>
+
 {% endblock %}

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +10,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f5f2;
+            background-color: #758467;
         }
         header {
-            background-color: #ff6347;
+            background-color: #758467;
             color: white;
             padding: 10px 20px;
             text-align: center;
@@ -20,7 +21,7 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #ffa07a;
+            background-color: #758467;
             padding: 10px 0;
         }
         nav a {
@@ -33,15 +34,17 @@
         }
         .content {
             padding: 20px;
+            background-color: #819171
         }
         footer {
-            background-color: #ff6347;
+            background-color: #758467;
             color: white;
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
         }
     </style>
+    {% block head %}{% endblock %}
 </head>
 <body>
     <header>

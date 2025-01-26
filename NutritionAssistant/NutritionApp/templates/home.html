@@ -5,11 +5,11 @@
 
 {% block header %}
     Discover Your Nutrition
-    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
 
 {% block content %}
-    <form action="/Nutrition/result" method="POST" >
+    <form action="/Nutrition/result/" method="POST" >
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">
